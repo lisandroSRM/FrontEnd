@@ -7,5 +7,10 @@
 </head>
 <body>
     <script src="./fetch.js"></script>
+    
+    <!-- colocamos una etiqueta de imagen para guardar los valores -->
+    <img src="" id="pokemon" height="200">
+    <script src="./consumoapi/pokeapi2.js"> </script>
+    
 </body>
 </html>
