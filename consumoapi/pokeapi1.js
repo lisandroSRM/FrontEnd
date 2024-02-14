@@ -12,11 +12,19 @@ fetch(`https://pokeapi.co/api/v2/pokemon/25/`)
     // ejecutamos un debugger para poder visualizar los datos por consola
     // debugger  
      renderPokemon(pokemon.sprites.front_default)
+     card.innerHTML = `
+     <img class="pokemon-image" src="${sprites.front_default}" alt="${name}">
+     <h2>Nombre: ${name}</h2>
+     <h3>Habilidades:</h3>
+     <ul>${abilities.map(({ ability }) => `<li>${ability.name}</li>`).join('')}</ul>
+     <h3>Estadísticas:</h3>
+     <ul>${stats.map(({ stat, base_stat }) => `<li>${stat.name}: ${base_stat}</li>`).join('')}</ul>
+   `;
 })
-.then(data => {
-    let pikachu = document.getElementById('pikachudiv')
-    pikachu.innerHTML=$data.name;
-})
+// .then(data => {
+//     let pikachu = document.getElementById('pikachudiv')
+//     pikachu.innerHTML=$data.name;
+// })
 
 
 
